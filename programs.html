@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Training Programs - Lusekelo Missions Skills Training Centre</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <style>
+    .programs-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      justify-content: center;
+      margin: 2.5rem 0 1.5rem 0;
+    }
+    .program-card {
+      background: #d0e3fa;
+      border-radius: 22px;
+      width: 320px;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      box-shadow: 0 2px 12px rgba(52,152,219,0.13);
+      padding: 2.2rem 1.2rem 1.5rem 1.2rem;
+      text-align: center;
+      transition: transform 0.18s;
+      position: relative;
+    }
+    .program-card:hover {
+      transform: scale(1.045) translateY(-6px);
+      box-shadow: 0 6px 24px rgba(52,152,219,0.18);
+    }
+    .program-card .icon-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      margin: 0 auto 1.2rem auto;
+      box-shadow: 0 2px 8px rgba(52,152,219,0.13);
+      background: rgba(255,255,255,0.7);
+      transition: box-shadow 0.2s;
+      flex-shrink: 0;
+    }
+    .tailoring { background: #e3c6f7; }
+    .carpentry { background: #fff3b0; }
+    .ict { background: #b8f7c2; }
+    .food { background: #b6f0e2; }
+    .entrepreneur { background: #b8c6f7; }
+    .program-card h3 {
+      margin: 0.5rem 0 0.3rem 0;
+      font-size: 1.15rem;
+      color: #217dbb;
+    }
+    .program-card p {
+      font-size: 1rem;
+      color: #444;
+      margin: 0;
+      margin-top: 0.5rem;
+      word-break: break-word;
+      /* Ensure text wraps inside the card, not the circle */
+    }
+    .overview-section {
+      background: linear-gradient(90deg, #3498db 0%, #6dd5fa 100%);
+      color: #fff;
+      border-radius: 18px;
+      padding: 2.2rem 2rem 1.7rem 2rem;
+      margin: 2rem auto 2.5rem auto;
+      max-width: 700px;
+      box-shadow: 0 2px 16px rgba(52,152,219,0.13);
+      text-align: center;
+      border-left: none;
+      border-right: none;
+      position: relative;
+      overflow: hidden;
+    }
+    .overview-section h2 {
+      color: #fff;
+      font-size: 2.2rem;
+      margin-bottom: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #217dbb44;
+    }
+    .overview-section p {
+      color: #f8fafc;
+      font-size: 1.22rem;
+      margin: 0;
+      font-weight: 500;
+      text-shadow: 0 1px 6px #217dbb22;
+    }
+    @media (max-width: 900px) {
+      .programs-list {
+        gap: 18px;
+      }
+      .program-card {
+        width: 98vw;
+        max-width: 340px;
+        min-height: 0;
+        padding: 1.5rem 1rem;
+      }
+      .program-card .icon-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 2.1rem;
+      }
+    }
+    @media (max-width: 600px) {
+      .programs-list {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .program-card {
+        width: 98vw;
+        max-width: 98vw;
+        min-width: 0;
+        border-radius: 18px;
+        min-height: 0;
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+      }
+      .program-card .icon-circle {
+        width: 68px;
+        height: 68px;
+        font-size: 1.5rem;
+      }
+      .overview-section {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>OUR TRAINING PROGRAMS</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="programs.html" class="active">Training Programs</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+  <main>
+    <section class="overview-section">
+      <h2>Overview</h2>
+      <p>We offer a range of hands-on, faith-based training programs designed to empower students with practical and spiritual skills for life and service.</p>
+    </section>
+
+    <section class="programs-list">
+      <div class="program-card tailoring">
+        <div class="icon-circle tailoring">🧵</div>
+        <h3>Tailoring & Fashion Design</h3>
+        <p>Learn practical sewing techniques, pattern making, garment construction, and entrepreneurship for clothing and fashion-related careers.</p>
+      </div>
+      <div class="program-card carpentry">
+        <div class="icon-circle carpentry">🪚</div>
+        <h3>Carpentry & Joinery</h3>
+        <p>Students are introduced to woodwork, furniture making, safety procedures, and the basics of construction and project work.</p>
+      </div>
+      <div class="program-card ict">
+        <div class="icon-circle ict">💻</div>
+        <h3>Computer & ICT</h3>
+        <p>Foundational and intermediate digital literacy, including Microsoft Office, internet use, computer hardware, and coding basics.</p>
+      </div>
+      <div class="program-card food">
+        <div class="icon-circle food">🍳</div>
+        <h3>Food Production</h3>
+        <p>Includes hygiene, nutrition, food prep, baking, and culinary entrepreneurship for personal or business growth.</p>
+      </div>
+      <div class="program-card entrepreneur">
+        <div class="icon-circle entrepreneur">🚀</div>
+        <h3>Entrepreneurship & Leadership</h3>
+        <p>Equips students with business startup principles, financial literacy, ethics, and Christian leadership training for holistic development.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Lusekelo Missions Skills Training Centre
+  </footer>
+</body>
+</html>

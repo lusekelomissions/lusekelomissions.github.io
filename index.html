@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lusekelo Missions Skills Training Centre</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+      body {
+        background: linear-gradient(135deg, #e7f1ff 0%, #f8fafc 100%);
+        font-family: 'Segoe UI', Arial, sans-serif;
+        color: #222;
+        margin: 0;
+      }
+      header {
+        background: #3498db;
+        color: #fff;
+        padding: 2.5rem 0 1.5rem 0;
+        text-align: center;
+        border-radius: 0 0 28px 28px;
+        box-shadow: 0 2px 12px rgba(52,152,219,0.10);
+      }
+      .tagline {
+        font-size: 1.35rem;
+        font-weight: 500;
+        margin-top: 0.7rem;
+        letter-spacing: 1.2px;
+        font-style: italic;
+      }
+      .motto {
+        font-size: 1.18rem;
+        font-style: italic;
+        color: #fffbe7;
+        margin-top: 0.7rem;
+        margin-bottom: 0.7rem;
+        display: block;
+        letter-spacing: 1px;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        background: #fff;
+        padding: 1.1rem 0;
+        box-shadow: 0 2px 8px rgba(52,152,219,0.05);
+        border-radius: 0 0 18px 18px;
+        margin-bottom: 2.2rem;
+      }
+      nav a {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.15rem;
+        padding: 0.6rem 1.2rem;
+        border-radius: 7px;
+        transition: background 0.2s, color 0.2s;
+      }
+      nav a.active, nav a:hover {
+        background: #3498db;
+        color: #fff;
+      }
+      /* HERO SECTION FULL WIDTH */
+      .hero-section {
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        background: url('images/lskbg.png') center/cover no-repeat;
+        min-height: 380px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+        box-shadow: 0 4px 32px rgba(52,152,219,0.10);
+        overflow: hidden;
+        z-index: 1;
+        margin-bottom: 48px;
+        padding: 0;
+      }
+      .hero-overlay {
+        background: rgba(52, 152, 219, 0.35);
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        z-index: 2;
+        padding: 3.5rem 1.5rem 2.5rem 1.5rem;
+        border-radius: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-section h2 {
+        font-size: 3.2rem;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 0.7rem;
+        letter-spacing: 1.5px;
+        text-shadow: 0 2px 8px rgba(52,152,219,0.25);
+      }
+      .hero-section .welcome-highlight {
+        background: rgba(255,251,231,0.85);
+        color: #f39c12;
+        font-weight: 700;
+        border-radius: 12px;
+        padding: 0.3em 1em;
+        font-size: 2rem;
+        display: inline-block;
+        margin-top: 0.5rem;
+        margin-bottom: 1.2rem;
+        box-shadow: 0 2px 8px #f1c40f22;
+      }
+      .cta-btn {
+        background: #3498db;
+        color: #fff;
+        border: none;
+        padding: 1rem 2.3rem;
+        border-radius: 7px;
+        font-size: 1.15rem;
+        font-weight: 600;
+        cursor: pointer;
+        margin: 0.5rem;
+        box-shadow: 0 2px 8px rgba(52,152,219,0.10);
+        transition: background 0.2s, color 0.2s;
+      }
+      .cta-btn:hover {
+        background: #217dbb;
+        color: #fff;
+      }
+      .cta-btn.alt {
+        background: #fff;
+        color: #3498db;
+        border: 2px solid #3498db;
+      }
+      .about-summary, .training-highlights {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 2px 16px rgba(52,152,219,0.08);
+        padding: 2.3rem 2rem;
+        margin-bottom: 2.5rem;
+        font-size: 1.18rem;
+        text-align: justify;
+      }
+      .about-summary h2, .training-highlights h2 {
+        font-size: 2rem;
+        color: #217dbb;
+        margin-bottom: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-align: left;
+      }
+      .about-summary p {
+        color: #444;
+        font-size: 1.18rem;
+        margin-bottom: 1.1rem;
+      }
+      .training-highlights h2 {
+        margin-bottom: 2rem;
+      }
+      .training-highlights .program-card {
+        flex: 1 1 260px;
+        background: linear-gradient(135deg, #e7f1ff 70%, #d0e3fa 100%);
+        padding: 2rem 1.2rem 1.5rem 1.2rem;
+        border-radius: 16px;
+        text-align: center;
+        margin: 0.7rem;
+        box-shadow: 0 2px 12px rgba(52,152,219,0.07);
+        transition: transform 0.15s, box-shadow 0.15s;
+        border: 2px solid #3498db22;
+        position: relative;
+      }
+      .training-highlights .program-card:hover {
+        transform: translateY(-8px) scale(1.04);
+        box-shadow: 0 6px 24px rgba(52,152,219,0.13);
+        border-color: #3498db55;
+      }
+      .training-highlights .program-card img {
+        margin-bottom: 1.1rem;
+        margin-top: 0.2rem;
+        width: 64px;
+        height: 64px;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 1px 6px rgba(52,152,219,0.08);
+      }
+      .training-highlights .program-card h3 {
+        font-size: 1.25rem;
+        color: #217dbb;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+      .training-highlights .program-card p {
+        color: #444;
+        font-size: 1.08rem;
+      }
+      .contact-snippet {
+        background: #e7f1ff;
+        border-radius: 12px;
+        margin: 2rem auto 1.5rem auto;
+        padding: 1.3rem 1.1rem;
+        max-width: 700px;
+        color: #217dbb;
+        font-size: 1.18rem;
+        box-shadow: 0 1px 8px rgba(52,152,219,0.06);
+        font-weight: 500;
+        text-align: justify;
+      }
+      .contact-snippet button {
+        font-size: 1.1rem;
+      }
+      footer {
+        text-align: center;
+        padding: 1.5rem 0 1rem 0;
+        color: #fff;
+        background: #3498db;
+        font-size: 1.18rem;
+        margin-top: 2.5rem;
+        border-radius: 18px 18px 0 0;
+        box-shadow: 0 -2px 8px rgba(52,152,219,0.03);
+        letter-spacing: 1px;
+        font-weight: 500;
+      }
+      @media (max-width: 900px) {
+        .about-summary, .training-highlights {
+          padding: 1.2rem 0.7rem;
+        }
+        .hero-section {
+          padding: 2rem 0.5rem 1.5rem 0.5rem;
+        }
+      }
+      @media (max-width: 600px) {
+        nav {
+          flex-direction: column;
+          gap: 8px;
+          padding: 0.5rem 0;
+        }
+        .hero-section h2 {
+          font-size: 2rem;
+        }
+        .about-summary h2, .training-highlights h2 {
+          font-size: 1.3rem;
+        }
+        .about-summary, .training-highlights {
+          font-size: 1rem;
+        }
+        .contact-snippet {
+          font-size: 1rem;
+        }
+        .hero-section .welcome-highlight {
+          font-size: 1.2rem;
+        }
+        .motto {
+          font-size: 1rem;
+        }
+        footer {
+          font-size: 1rem;
+        }
+      }
+    </style>
+</head>
+<body>
+<header>
+    <h1 style="font-size:2.6rem; letter-spacing:2px; font-weight:800; text-shadow:0 2px 12px #217dbb33;">LUSEKELO MISSIONS SKILLS TRAINING CENTRE</h1>
+    <span class="motto">"Empowered to Serve, Skilled to Transform."</span>
+    <p class="tagline"></p>
+</header>
+<nav>
+  <a href="index.html" class="active">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="programs.html">Training Programs</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact Us</a>
+</nav>
+
+<!-- HERO SECTION OUTSIDE MAIN -->
+<section class="hero-section">
+  <div class="hero-overlay">
+    <h2 style="font-size:3.8rem;">Welcome to Lusekelo Missions Skills Training Centre</h2>
+    <p>
+      <span class="welcome-highlight" style="font-size:2.3rem;">
+        &ldquo;Bridging faith and practical empowerment through holistic skills training.&rdquo;
+      </span>
+    </p>
+    <button onclick="location.href='programs.html'" class="cta-btn">Explore Our Programs</button>
+    <button onclick="location.href='gallery.html'" class="cta-btn alt">Visit Our Gallery</button>
+  </div>
+</section>
+
+<main>
+  <section class="about-summary" style="max-width: 850px; margin: auto;">
+    <h2>About Us</h2>
+    <p>
+      <span style="background:#e7ffe7; color:#27ae60; font-weight:600; border-radius:8px; padding:0.15em 0.5em;">Lusekelo Missions Skills Training Centre</span>
+      is a dynamic faith-based institution, a ministry of the Leadership Building and Empowerment Ministry (LBEM). Rooted in biblical principles, we equip individuals with vocational, spiritual, and leadership skills that enable them to live purposefully and serve their communities.
+    </p>
+    <p>
+      Our programs focus on <span style="background:#fffbe7; color:#f1c40f; font-weight:600; border-radius:8px; padding:0.1em 0.4em;">hands-on training</span> and <span style="background:#f0e7ff; color:#8e44ad; font-weight:600; border-radius:8px; padding:0.1em 0.4em;">discipleship</span>, empowering youth, women, and vulnerable groups to become leaders and agents of transformation.
+    </p>
+    <p style="text-align:center;">
+      <button onclick="location.href='about.html'" class="cta-btn">Learn More About Us</button>
+    </p>
+  </section>
+
+  <section class="training-highlights" style="max-width: 950px; margin: 50px auto;">
+    <h2>Training Programs Highlights</h2>
+    <div style="display:flex; flex-wrap: wrap; gap: 28px; justify-content: center;">
+      <div class="program-card">
+        <img src="https://img.icons8.com/ios-filled/64/3498db/sewing-machine.png" alt="Tailoring icon" />
+        <h3>Tailoring & Fashion Design</h3>
+        <p><span style="background:#e7ffe7; color:#27ae60; font-weight:600; border-radius:8px; padding:0.1em 0.4em;">Practical tailoring</span> skills and fashion design basics.</p>
+      </div>
+      <div class="program-card">
+        <img src="https://img.icons8.com/ios-filled/64/3498db/hammer.png" alt="Carpentry icon" />
+        <h3>Carpentry & Joinery</h3>
+        <p><span style="background:#fffbe7; color:#f1c40f; font-weight:600; border-radius:8px; padding:0.1em 0.4em;">Hands-on carpentry</span> training for woodworking and joinery.</p>
+      </div>
+      <div class="program-card">
+        <img src="https://img.icons8.com/ios-filled/64/3498db/laptop.png" alt="ICT icon" />
+        <h3>Computer & ICT Skills</h3>
+        <p><span style="background:#f0e7ff; color:#8e44ad; font-weight:600; border-radius:8px; padding:0.1em 0.4em;">Computer literacy</span> and practical ICT skills.</p>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top: 28px;">
+      <button onclick="location.href='programs.html'" class="cta-btn">View All Programs</button>
+    </p>
+  </section>
+
+  <section class="contact-snippet">
+    <p>Questions? <button onclick="location.href='contact.html'" class="cta-btn">Contact Us</button></p>
+  </section>
+</main>
+<footer>
+  &copy; 2025 Lusekelo Missions Skills Training Centre
+</footer>
+</body>
+</html>

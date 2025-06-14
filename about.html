@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Lusekelo Missions Skills Training Centre</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <style>
+    .about-icon {
+      font-size: 2.2rem;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+    .about-box {
+      border-radius: 18px;
+      box-shadow: 0 2px 8px rgba(52,152,219,0.08);
+      padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    .about-who { background: #e7f1ff; }
+    .about-vision { background: #fffbe7; }
+    .about-mission { background: #e7ffe7; }
+    .about-values { background: #f0e7ff; flex-direction: column; }
+    .about-box h2 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .about-vision h2 { color: #f1c40f; }
+    .about-mission h2 { color: #27ae60; }
+    .about-values h2 { color: #8e44ad; }
+    .about-who h2 { color: #217dbb; }
+    .core-values-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0 0;
+    }
+    .core-values-list li {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      min-width: 180px;
+      box-shadow: 0 1px 6px rgba(155,89,182,0.06);
+      flex: 1 1 220px;
+      font-size: 1.05rem;
+    }
+    .about-cta {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+    .about-team-section {
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+    }
+    .team-member {
+      background: #f8fafc;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(52,152,219,0.08);
+      padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+      max-width: 260px;
+      min-width: 220px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .team-member img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 8px rgba(52,152,219,0.10);
+      background: #fff;
+    }
+    .team-member h3 {
+      margin: 0.5rem 0 0.3rem 0;
+      font-size: 1.18rem;
+      color: #217dbb;
+      font-weight: 700;
+    }
+    .team-member p {
+      font-size: 1rem;
+      color: #444;
+      margin: 0;
+    }
+    @media (max-width: 700px) {
+      .about-box {
+        flex-direction: column;
+        gap: 8px;
+        padding: 1rem 0.7rem;
+      }
+      .core-values-list {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .team-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+      }
+      .team-member {
+        max-width: 98vw;
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ABOUT US</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About Us</a>
+    <a href="programs.html">Training Programs</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+  <main>
+    <section style="max-width: 900px; margin: auto;">
+      <div class="about-box about-who" style="background:#e7f9ee;">
+        <span class="about-icon">🙋‍♂️</span>
+        <div>
+          <h2 style="color:#16a085;">Who We Are</h2>
+          <p>
+            Lusekelo Missions Skills Training Centre is a faith-based vocational and discipleship center operating under the <strong>Leadership Building and Empowerment Ministry (LBEM)</strong>.
+            Our mission is to empower individuals with practical skills and spiritual development to lead impactful lives.
+          </p>
+        </div>
+      </div>
+      <div class="about-box about-vision">
+        <span class="about-icon">🌟</span>
+        <div>
+          <h2>Vision</h2>
+          <p>
+            To raise a generation of morally upright, skilled, and empowered individuals who will serve and transform their communities.
+          </p>
+        </div>
+      </div>
+      <div class="about-box about-mission">
+        <span class="about-icon">🎯</span>
+        <div>
+          <h2>Mission</h2>
+          <p>
+            To provide holistic vocational training and discipleship rooted in Christian values, equipping participants for both personal growth and community service.
+          </p>
+        </div>
+      </div>
+      <div class="about-box about-values">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span class="about-icon">💎</span>
+          <h2>Core Values</h2>
+        </div>
+        <ul class="core-values-list">
+          <li><strong>Faith:</strong> Grounding all actions in biblical truth.</li>
+          <li><strong>Empowerment:</strong> Developing capacity and confidence in all learners.</li>
+          <li><strong>Excellence:</strong> Striving for the highest standards in training and conduct.</li>
+          <li><strong>Integrity:</strong> Upholding honesty, accountability, and moral uprightness.</li>
+          <li><strong>Community Impact:</strong> Creating transformation through service and leadership.</li>
+        </ul>
+      </div>
+
+      <!-- Our Team Section -->
+      <div class="about-team-section">
+        <h2 style="text-align:center; color:#217dbb; margin-top:3rem; margin-bottom:2rem;">Our Team</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="images/team1.jpg" alt="Team Member 1" />
+            <h3>Rev. Bernard Mwepu</h3>
+            <p><strong>Executive Director</strong><br>
+            He brings over 30 years of theological work, and leadership training. He is passionate about empowering youth and women through skills training.</p>
+          </div>
+          <div class="team-member">
+            <img src="images/team2.jpg" alt="Team Member 2" />
+            <h3>Mr. Christopher B Phiri</h3>
+            <p><strong>Programs and Business Manager</strong><br>
+            30 years in Community development, Project management, Strategic planning and is passionate about working with the underprivileged communities, children, youth and women.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End Our Team Section -->
+
+      <div class="about-cta">
+        <button class="cta-btn" onclick="location.href='gallery.html'">See Our Gallery</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Lusekelo Missions Skills Training Centre
+  </footer>
+</body>
+</html>
